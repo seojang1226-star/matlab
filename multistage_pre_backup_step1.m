@@ -415,82 +415,95 @@ classdef Doosan_Pre_Automation_251120 < matlab.apps.AppBase
             data_table = findobj(app.Interstage_Seal_Parameter_Table_Panel,'Tag', Table_tag_name);
             if ~isempty(data_dropdown)
                 data_dropdown_val = data_dropdown.Value;
-                switch data_dropdown_val
-                    case "Type 1"
-                        data_table.ColumnName = type1_row_name;
-                        data_table.Data = type1_data_value;
-                        app.matches_data = app.matches_1;
-                        com_val = "SYS";
-                    case "Type 2"
-                        data_table.ColumnName = type2_row_name;
-                        data_table.Data = type2_data_value;
-                        app.matches_data = app.matches_2;
-                        com_val = "SYS 1";
-                    case "Type 3"
-                        data_table.ColumnName = type3_row_name;
-                        data_table.Data = type3_data_value;
-                        app.matches_data = app.matches_3;
-                        com_val = "SYS 10";
-                    case "Type 4"
-                        data_table.ColumnName = type4_row_name;
-                        data_table.Data = type4_data_value;
-                        app.matches_data = app.matches_4;
-                        com_val = "SYS 11";
-                    case "Type 5"
-                        data_table.ColumnName = type5_row_name;
-                        data_table.Data = type5_data_value;
-                        app.matches_data = app.matches_5;
-                        com_val = "SYS 2";
-                    case "Type 6"
-                        data_table.ColumnName = type6_row_name;
-                        data_table.Data = type6_data_value;
-                        app.matches_data = app.matches_6;
-                        com_val = "SYS 4";
-                    case "Type 7"
-                        data_table.ColumnName = type7_row_name;
-                        data_table.Data = type7_data_value;
-                        app.matches_data = app.matches_7;
-                        com_val = "SYS 5";
-                    case "Type 8"
-                        data_table.ColumnName = type8_row_name;
-                        data_table.Data = type8_data_value;
-                        app.matches_data = app.matches_8;
-                        com_val = "SYS 6";
-                    case "Type 9"
-                        data_table.ColumnName = type9_row_name;
-                        data_table.Data = type9_data_value;
-                        app.matches_data = app.matches_1_hp;
-                        com_val = "SYS 8";
-                    case "Type 10"
-                        data_table.ColumnName = type10_row_name;
-                        data_table.Data = type10_data_value;
-                        app.matches_data = app.matches_2_hp;
-                        com_val = "SYS 9";
-                    case "Type 11"
-                        data_table.ColumnName = type11_row_name;
-                        data_table.Data = type11_data_value;
-                        app.matches_data = app.matches_3_hp;
-                        com_val = "SYS 12";
-                    case "Type 12"
-                        data_table.ColumnName = type12_row_name;
-                        data_table.Data = type12_data_value;
-                        app.matches_data = app.matches_12;
-                        com_val = "SYS 15";
-                    case "Type 13"
-                        data_table.ColumnName = type13_row_name;
-                        data_table.Data = type13_data_value;
-                        app.matches_data = app.matches_13;
-                        com_val = "SYS 16";
-                    case "Type 14"
-                        data_table.ColumnName = type14_row_name;
-                        data_table.Data = type14_data_value;
-                        app.matches_data = app.matches_14;
-                        com_val = "SYS 17";
-                    case "Type 15"
-                        data_table.ColumnName = type15_row_name;
-                        data_table.Data = type15_data_value;
-                        app.matches_data = app.matches_15;
-                        com_val = "SYS 18";
+                if data_dropdown_val == "Type 1"
+                    data_table.ColumnName = type1_row_name;
+                    data_table.Data = type1_data_value;
+                    app.matches_data = app.matches_1;
+                    com_val = "SYS";
+                end
+                if data_dropdown_val == "Type 2"
+                    data_table.ColumnName = type2_row_name;
+                    data_table.Data = type2_data_value;
+                    app.matches_data = app.matches_2;
+                    com_val = "SYS 1";
+                end
+                if data_dropdown_val == "Type 3"
+                    data_table.ColumnName = type3_row_name;
+                    data_table.Data = type3_data_value;
+                    app.matches_data = app.matches_3;
+                    com_val = "SYS 10";
+                end
+                if data_dropdown_val == "Type 4"
+                    data_table.ColumnName = type4_row_name;
+                    data_table.Data = type4_data_value;
+                    app.matches_data = app.matches_4;
+                    com_val = "SYS 11";
+                end
+                if data_dropdown_val == "Type 5"
+                    data_table.ColumnName = type5_row_name;
+                    data_table.Data = type5_data_value;
+                    app.matches_data = app.matches_5;
+                    com_val = "SYS 2";
+                end
+                if data_dropdown_val == "Type 6"
+                    data_table.ColumnName = type6_row_name;
+                    data_table.Data = type6_data_value;
+                    app.matches_data = app.matches_6;
+                    com_val = "SYS 4";
+                end
+                if data_dropdown_val == "Type 7"
+                    data_table.ColumnName = type7_row_name;
+                    data_table.Data = type7_data_value;
+                    app.matches_data = app.matches_7;
+                    com_val = "SYS 5";
+                end
+                if data_dropdown_val == "Type 8"
+                    data_table.ColumnName = type8_row_name;
+                    data_table.Data = type8_data_value;
+                    app.matches_data = app.matches_8;
+                    com_val = "SYS 6";
+                end
+                if data_dropdown_val == "Type 9"
+                    data_table.ColumnName = type9_row_name;
+                    data_table.Data = type9_data_value;
+                    app.matches_data = app.matches_1_hp;
+                    com_val = "SYS 8";
+                end
+                if data_dropdown_val == "Type 10"
+                    data_table.ColumnName = type10_row_name;
+                    data_table.Data = type10_data_value;
+                    app.matches_data = app.matches_2_hp;
+                    com_val = "SYS 9";
+                end
+                if data_dropdown_val == "Type 11"
+                    data_table.ColumnName = type11_row_name;
+                    data_table.Data = type11_data_value;
+                    app.matches_data = app.matches_3_hp;
+                    com_val = "SYS 12";
+                end
+                if data_dropdown_val == "Type 12"
+                    data_table.ColumnName = type12_row_name;
+                    data_table.Data = type12_data_value;
+                    app.matches_data = app.matches_12;
+                    com_val = "SYS 15";
+                end
+                if data_dropdown_val == "Type 13"
+                    data_table.ColumnName = type13_row_name;
+                    data_table.Data = type13_data_value;
+                    app.matches_data = app.matches_13;
+                    com_val = "SYS 16";
+                end
+                if data_dropdown_val == "Type 14"
+                    data_table.ColumnName = type14_row_name;
+                    data_table.Data = type14_data_value;
+                    app.matches_data = app.matches_14;
+                    com_val = "SYS 17";
+                end
+                if data_dropdown_val == "Type 15"
+                    data_table.ColumnName = type15_row_name;
+                    data_table.Data = type15_data_value;
+                    app.matches_data = app.matches_15;
+                    com_val = "SYS 18";
                 end
             end
             app.com_val_New{end+1,1} =com_val;
@@ -602,37 +615,56 @@ classdef Doosan_Pre_Automation_251120 < matlab.apps.AppBase
             data_table = findobj(app.Tip_Seal_Parameter_Table_Panel,'Tag', Table_tag_name);
             if ~isempty(data_dropdown)
                 data_dropdown_val = data_dropdown.Value;
-                switch data_dropdown_val
-                    case "Type 1"
-                        data_table.ColumnName = tip_type1_row_name;
-                        data_table.Data = tip_type1_data_value;
-                        app.matches_data = tip_matches_1;
-                        com_val = "SYS 1";
-                    case "Type 2"
-                        data_table.ColumnName = tip_type2_row_name;
-                        data_table.Data = tip_type2_data_value;
-                        app.matches_data = tip_matches_2;
-                        com_val = "SYS 3";
-                    case "Type 3"
-                        data_table.ColumnName = tip_type3_row_name;
-                        data_table.Data = tip_type3_data_value;
-                        app.matches_data = tip_matches_3;
-                        com_val = "SYS 4";
-                    case "Type 4"
-                        data_table.ColumnName = tip_type4_row_name;
-                        data_table.Data = tip_type4_data_value;
-                        app.matches_data = tip_matches_4;
-                        com_val = "SYS 5";
-                    case "Type 5"
-                        data_table.ColumnName = tip_type5_row_name;
-                        data_table.Data = tip_type5_data_value;
-                        app.matches_data = tip_matches_5;
-                        com_val = "SYS 6";
-                    case "Type 6"
-                        data_table.ColumnName = tip_type6_row_name;
-                        data_table.Data = tip_type6_data_value;
-                        app.matches_data = tip_matches_6;
-                        com_val = "SYS 8";
+                if data_dropdown_val == "Type 1"
+                    data_table.ColumnName = tip_type1_row_name;
+                    data_table.Data = tip_type1_data_value;
+                    app.matches_data = tip_matches_1;
+                    com_val = "SYS 1";
+                end
+            end
+            if ~isempty(data_dropdown)
+                data_dropdown_val = data_dropdown.Value;
+                if data_dropdown_val == "Type 2"
+                    data_table.ColumnName = tip_type2_row_name;
+                    data_table.Data = tip_type2_data_value;
+                    app.matches_data = tip_matches_2;
+                    com_val = "SYS 3";
+                end
+            end
+            if ~isempty(data_dropdown)
+                data_dropdown_val = data_dropdown.Value;
+                if data_dropdown_val == "Type 3"
+                    data_table.ColumnName = tip_type3_row_name;
+                    data_table.Data = tip_type3_data_value;
+                    app.matches_data = tip_matches_3;
+                    com_val = "SYS 4";
+                end
+            end
+            if ~isempty(data_dropdown)
+                data_dropdown_val = data_dropdown.Value;
+                if data_dropdown_val == "Type 4"
+                    data_table.ColumnName = tip_type4_row_name;
+                    data_table.Data = tip_type4_data_value;
+                    app.matches_data = tip_matches_4;
+                    com_val = "SYS 5";
+                end
+            end
+            if ~isempty(data_dropdown)
+                data_dropdown_val = data_dropdown.Value;
+                if data_dropdown_val == "Type 5"
+                    data_table.ColumnName = tip_type5_row_name;
+                    data_table.Data = tip_type5_data_value;
+                    app.matches_data = tip_matches_5;
+                    com_val = "SYS 6";
+                end
+            end
+            if ~isempty(data_dropdown)
+                data_dropdown_val = data_dropdown.Value;
+                if data_dropdown_val == "Type 6"
+                    data_table.ColumnName = tip_type6_row_name;
+                    data_table.Data = tip_type6_data_value;
+                    app.matches_data = tip_matches_6;
+                    com_val = "SYS 8";
                 end
             end
             app.com_tip_val_New{end+1,1} = com_val;
