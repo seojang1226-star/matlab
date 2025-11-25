@@ -1220,8 +1220,6 @@ classdef Doosan_Pre_Automation_251120 < matlab.apps.AppBase
                 reynolds_num = repmat(10000000, app.Stage_Number, 1);
                 Stage_Data = [Stage_Data, array2table(reynolds_num)];
 
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Stage_Number_Text = ;
-
                 app.Stage_Number_TextArea.Value = "1" + " ~ " +  num2str(app.Stage_Number);
                 app.Pre_Stage_Number_TextArea.Value = "1" + " ~ " +  num2str(app.Stage_Number);
                 app.Stage_Table.Data = arrayfun(@(x) sprintf('%.2f', x), table2array(Stage_Data), 'UniformOutput', false);
